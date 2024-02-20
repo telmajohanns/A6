@@ -8,7 +8,7 @@ class Car {
         this.name = name;
     }
 
-    String getNameOfCar() {
+    String getName() {
         return name;
     }
 }
