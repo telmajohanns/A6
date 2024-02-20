@@ -8,18 +8,20 @@ import org.junit.Before;
 
 public class CarOwnerTest {
 
+    private static final String BEETLE = "Beetle";
+    private static final String JOHN_DOE = "John Doe";
     private Car car;
     private CarOwner carOwner;
 
     @Test
     public void testGetName() {
-        assertEquals("John Doe", carOwner.getName());
+        assertEquals(JOHN_DOE, carOwner.getName());
     }
 
     @Before
     public void setUp() {
-        car = new Car("Beetle");
-        carOwner = new CarOwner("John Doe", car);
+        car = new Car(BEETLE);
+        carOwner = new CarOwner(JOHN_DOE, car);
     }
 
 }
