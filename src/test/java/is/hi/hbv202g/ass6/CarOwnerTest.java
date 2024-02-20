@@ -4,13 +4,22 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
+
 public class CarOwnerTest {
+
+    private Car car;
+    private CarOwner carOwner;
 
     @Test
     public void testGetName() {
-        Car car=new Car("Beetle");
-        CarOwner carOwner = new CarOwner("John Doe", car);
         assertEquals("John Doe", carOwner.getName());
+    }
+
+    @Before
+    public void setUp() {
+        car = new Car("Beetle");
+        carOwner = new CarOwner("John Doe", car);
     }
 
 }
